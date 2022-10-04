@@ -27,7 +27,7 @@ function buyNow() {
   });
 }
 
-function initSubmitListener() {
+function initSubmitListeners() {
   //listener for sign up section of account page
   $("#submit-signup").on("click", function (e) {
     console.log("submit");

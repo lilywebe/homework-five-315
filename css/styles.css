@@ -1,92 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Error: expected "{".
+ *   ,
+ * 3 | @import "nav.scss";
+ *   |                   ^
+ *   '
+ *   scss\styles.scss 3:19  root stylesheet */
 
-html,
-body {
-  height: 100%;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+    "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a   \2577 \a 3 \2502  @import "nav.scss";\d\a   \2502                    ^\a   \2575 \a   scss\\styles.scss 3:19  root stylesheet';
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-bottom: 16px;
-}
-
-nav {
-  min-height: 50px;
-  width: 100%;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-nav .logo {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  min-height: 73px;
-  width: 200px;
-}
-nav .logo img {
-  min-height: 73px;
-  width: 73px;
-}
-nav .logo .logo-txt {
-  font-size: 16px;
-  font-family: "Segoe UI";
-}
-nav .search {
-  min-height: 44px;
-  width: 604px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  background-color: #587c83;
-}
-nav .search img {
-  min-height: 25px;
-  width: 25px;
-  margin-left: 10px;
-}
-nav .search .search-txt {
-  font-size: 16px;
-  font-family: "Segoe UI";
-}
-nav .links {
-  min-height: 108px;
-  width: 590px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-nav .links a {
-  text-decoration: none;
-  color: #000;
-  font-size: 16px;
-  font-family: "Segoe UI";
-}
-nav .links .accountImg {
-  min-height: 47px;
-  width: 47px;
-}
-nav .links .accountImg img {
-  min-height: 47px;
-  width: 47px;
-}
-nav .links .cartImg {
-  min-height: 47px;
-  width: 47px;
-}
-nav .links .cartImg img {
-  min-height: 47px;
-  width: 47px;
-}
-
-/*# sourceMappingURL=styles.css.map */
