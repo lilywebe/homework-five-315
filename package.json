@@ -1,0 +1,27 @@
+{
+  "name": "homework-five-315",
+  "version": "1.0.0",
+  "description": "This assignment will help you understand how to re-create a site from an Adobe XD prototype and make a site fully responsive. You will also learn how to simulate a log in and out of a website and to show a shopping cart.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "compile-sass": "sass scss/styles.scss css/styles.css -w",
+    "serve": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilywebe/homework-five-315.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lilywebe/homework-five-315/issues"
+  },
+  "homepage": "https://github.com/lilywebe/homework-five-315#readme",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
