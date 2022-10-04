@@ -26,6 +26,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  border-bottom: 1px solid #000;
 }
 nav .logo {
   display: flex;
@@ -87,6 +88,11 @@ nav .links .cartImg {
 nav .links .cartImg img {
   min-height: 47px;
   width: 47px;
+}
+
+.home-wrapper {
+  min-height: 100%;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
