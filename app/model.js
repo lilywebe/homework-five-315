@@ -22,7 +22,7 @@ export function changePage(pageID, callback) {
       });
       callback();
     });
-  } else {
+  } else if (pageID == "cart") {
     console.log(pageID);
     $.get(`pages/${pageID}.html`, function (data) {
       console.log("data " + data);
@@ -35,6 +35,12 @@ export function changePage(pageID, callback) {
           //add books to cart
           ();
       });
+    });
+  } else {
+    $.get(`pages/${pageID}.html`, function (data) {
+      console.log("data " + data);
+      $("#app").html(data);
+      callback();
     });
   }
 }
