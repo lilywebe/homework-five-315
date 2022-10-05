@@ -94,5 +94,54 @@ nav .links .cartImg img {
   min-height: 100%;
   width: 100%;
 }
+.home-wrapper .home-header-container {
+  min-height: 530px;
+  width: 100%;
+  background-color: red;
+}
+.home-wrapper .home-header-container .home-header-img {
+  min-height: 530px;
+  width: 1500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 58px;
+  background-color: purple;
+}
+.home-wrapper .home-header-container .home-header-img .hero-img {
+  min-height: 530px;
+  width: 1500px;
+  background-image: linear-gradient(rgba(88, 124, 131, 0.6), rgba(88, 124, 131, 0.6)), url(../images/home-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.home-wrapper .home-header-container .home-header-img .hero-header-text {
+  min-height: 52px;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+.home-wrapper .home-header-container .home-header-img .hero-txt {
+  min-height: 43px;
+  width: 265px;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Segoe UI";
+  color: #fff;
+}
+.home-wrapper .home-header-container .home-header-img .hero-txt-two {
+  min-height: 43px;
+  width: 164px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: "Segoe UI";
+  color: #fff;
+}
 
 /*# sourceMappingURL=styles.css.map */
