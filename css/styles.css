@@ -97,20 +97,18 @@ nav .links .cartImg img {
 .home-wrapper .home-header-container {
   min-height: 530px;
   width: 100%;
-  background-color: red;
 }
 .home-wrapper .home-header-container .home-header-img {
   min-height: 530px;
-  width: 1500px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 58px;
-  background-color: purple;
 }
 .home-wrapper .home-header-container .home-header-img .hero-img {
   min-height: 530px;
-  width: 1500px;
+  width: 80%;
   background-image: linear-gradient(rgba(88, 124, 131, 0.6), rgba(88, 124, 131, 0.6)), url(../images/home-hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -123,8 +121,8 @@ nav .links .cartImg img {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 70%;
-  left: 80%;
+  top: 75%;
+  left: 70%;
   transform: translate(-50%, -50%);
 }
 .home-wrapper .home-header-container .home-header-img .hero-txt {
@@ -142,6 +140,56 @@ nav .links .cartImg img {
   font-size: 16px;
   font-family: "Segoe UI";
   color: #fff;
+}
+.home-wrapper .home-books-container {
+  min-height: 100%;
+  width: 100%;
+  margin-top: 170px;
+}
+.home-wrapper .home-books-container .home-books-row {
+  min-height: 700px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.home-wrapper .home-books-container .home-books-row .home-book {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100%;
+  width: 415px;
+  margin-bottom: 170px;
+}
+.home-wrapper .home-books-container .home-books-row .home-book img {
+  min-height: 491px;
+  width: 306px;
+  margin: 0 auto;
+}
+.home-wrapper .home-books-container .home-books-row .home-book .book-txt {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Segoe UI";
+}
+.home-wrapper .home-books-container .home-books-row .home-book .price-txt {
+  padding: 30px;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Segoe UI";
+}
+.home-wrapper .home-books-container .home-books-row .home-book .book-btn {
+  margin: 0 auto;
+  width: 222px;
+  border: 2px solid #000;
+  color: #000;
+  padding: 15px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
