@@ -38,7 +38,7 @@ function initSubmitListeners() {
 
     //make sure to check that all fields are valid
 
-    if (!fn && !ln && !email && !pw) {
+    if (!fn || !ln || !em || !pw) {
       alert("you must respond to all fields");
     } else {
       let userObj = {
@@ -65,6 +65,10 @@ function initSubmitListeners() {
         //if user's login info is correct, alerts them that they are logged in and redirects to home page
         alert("You are logged in ");
         model.changePage("home", buyNow);
+      }
+      //if login info is incorrect, alerts the user that its incorrect
+      else {
+        alert("Your username or password is incorrect");
       }
     }
   });
