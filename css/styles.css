@@ -539,4 +539,74 @@ nav .links .cartImg img {
   font-size: 16px;
 }
 
+.bookclub-hero {
+  width: 80%;
+  height: 460px;
+  background-image: linear-gradient(rgba(88, 124, 131, 0.6), rgba(88, 124, 131, 0.6)), url("../images/book-club-hero.png");
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  margin-top: 140px;
+  color: white;
+  text-align: center;
+}
+.bookclub-hero h3 {
+  padding-top: 125px;
+  font-size: 32px;
+}
+.bookclub-hero h4 {
+  font-size: 26px;
+  padding-top: 60px;
+}
+
+.ereading-hero {
+  width: 80%;
+  height: 460px;
+  background-image: linear-gradient(rgba(88, 124, 131, 0.6), rgba(88, 124, 131, 0.6)), url("../images/eread-hero.png");
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  margin-top: 140px;
+  color: white;
+  text-align: center;
+}
+.ereading-hero h3 {
+  padding-top: 125px;
+  font-size: 32px;
+}
+.ereading-hero h4 {
+  font-size: 26px;
+  padding-top: 60px;
+}
+
+.blog-post-section {
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.blog-post-section img {
+  max-height: 463px;
+  max-width: 622px;
+}
+.blog-post-section .blog-text-section {
+  padding-left: 20px;
+  width: 50%;
+}
+
+@media screen and (max-width: 1000px) {
+  .blog-post-section img {
+    width: 260px;
+    height: 205px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .blog-post-section img {
+    width: 115px;
+    height: 95px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
