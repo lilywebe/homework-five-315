@@ -123,6 +123,7 @@
   }
 }
 
+// note to self: fix header img
 @media screen and (max-width: 1000px) {
   .home-wrapper {
     .home-header-container {
@@ -136,16 +137,36 @@
       .home-header-img {
         min-height: 400px;
         width: 80%;
-        margin-top: 58px;
+        margin: 58px;
         background-color: #587c83;
 
+        // fix this...
         .hero-img {
-          height: 77px;
-          width: 116px;
+          height: 200px;
+          width: 200px;
           background-image: url(../images/home-hero.jpg);
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
+        }
+      }
+    }
+    .home-books-container {
+      .home-books-row {
+        min-height: 700px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .home-book {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          min-height: 100%;
+          width: 415px;
+          margin-bottom: 170px;
         }
       }
     }
