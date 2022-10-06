@@ -1,6 +1,25 @@
 var userInfo = {};
 
-var bookList = [];
+var bookList = [
+  {
+    id: 0,
+    imgURL: "images/to-kill-a-mockingbird.jpg",
+    price: "15.99",
+    desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
+  },
+  {
+    id: 1,
+    imgURL: "images/becoming.jpg",
+    price: "25.99",
+    desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
+  },
+  {
+    id: 2,
+    imgURL: "images/firestarter.jpg",
+    price: "15.99",
+    desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
+  },
+];
 
 var cart = [];
 
@@ -25,16 +44,8 @@ export function changePage(pageID, callback) {
   } else if (pageID == "cart") {
     console.log(pageID);
     $.get(`pages/${pageID}.html`, function (data) {
-      console.log("data " + data);
       $("#app").html(data);
-      $.each(cart, function (idx, cartItem) {
-        console.log(bookList[cartItem]);
-        let book = bookList[cartItem];
-        $(".items")
-          .append
-          //add books to cart
-          ();
-      });
+      cart.forEach((item) => {});
     });
   } else {
     $.get(`pages/${pageID}.html`, function (data) {
@@ -59,7 +70,37 @@ export function checkUserLogin(useremail, userpass) {
   }
 }
 
+export function removeFromCart(bookIdx) {
+  cart.forEach((item) => {
+    if (item.id == bookIdx) {
+      item.quantity -= 1;
+    }
+  });
+  cart = $.grep(cart, function (item) {
+    if (item.quantity > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+}
+
 export function addToCart(bookIdx) {
   console.log(cart);
-  cart.push(bookIdx);
+
+  let happened = false;
+
+  cart.forEach((item) => {
+    if (item.id == bookIdx) {
+      item.quantity += 1;
+      happened = true;
+    }
+  });
+
+  if (!happened) {
+    cart.push({
+      id: bookIdx,
+      quantity: 1,
+    });
+  }
 }

@@ -8,6 +8,8 @@ function changeRoute() {
     model.changePage(pageID, buyNow);
   } else if (pageID == "account") {
     model.changePage(pageID, initSubmitListeners);
+  } else if (pageID == "cart") {
+    model.changePage(pageID, initQuantityListeners);
   } else {
     model.changePage(pageID);
   }
@@ -18,9 +20,11 @@ function initURLListener() {
   changeRoute();
 }
 
+function initQuantityListeners() {}
+
 //add buy listeners
 function buyNow() {
-  $(".bookInfo button").on("click", function (e) {
+  $(".book-btn").on("click", function (e) {
     let bookid = e.currentTarget.id;
     console.log(bookid);
     model.addToCart(bookid);
