@@ -192,4 +192,67 @@ nav .links .cartImg img {
   cursor: pointer;
 }
 
+.accounts-page {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.accounts-page h3 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+.accounts-page p {
+  font-size: 16px;
+}
+.accounts-page #submit-signup, .accounts-page #submit-login, .accounts-page #submit-logout {
+  width: 170px;
+  height: 45px;
+  color: white;
+  background-color: #587C83;
+  font-size: 16px;
+}
+.accounts-page .login-form {
+  display: flex;
+  align-items: left;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.accounts-page .login-form input {
+  border: 0px;
+  border-bottom: 1px solid black;
+  margin-bottom: 40px;
+}
+.accounts-page .sign-up-form {
+  display: flex;
+  align-items: left;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.accounts-page .sign-up-form input {
+  border: 0px;
+  border-bottom: 1px solid black;
+  margin-bottom: 40px;
+}
+.accounts-page .logout {
+  display: none;
+  width: 60%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .accounts-page {
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 0px;
+  }
+  .accounts-page .sign-up-form, .accounts-page .login-form, .accounts-page .logout {
+    margin-top: 90px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
