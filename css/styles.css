@@ -276,5 +276,120 @@ nav .links .cartImg img {
     margin-top: 90px;
   }
 }
+.blog-section {
+  width: 80%;
+  height: 460px;
+  margin: 0 auto;
+  margin-top: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #587C83;
+}
+.blog-section .large-image-section {
+  width: 30%;
+  height: 460px;
+}
+.blog-section .large-image-section img {
+  height: 460px;
+  width: 626px;
+  align: left;
+}
+.blog-section .img-section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.blog-section .img-section img {
+  max-height: 380px;
+  max-width: 250px;
+}
+.blog-section .text-section {
+  color: white;
+  text-align: center;
+  width: 35%;
+  padding-right: 100px;
+}
+.blog-section .text-section h3 {
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+.blog-section .text-section p {
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+.blog-section .text-section a {
+  width: 222px;
+  height: 69px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
+.blog-section .text-section-large {
+  color: white;
+  text-align: center;
+  width: 35%;
+  padding-right: 100px;
+}
+.blog-section .text-section-large h3 {
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+.blog-section .text-section-large p {
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+.blog-section .text-section-large a {
+  width: 222px;
+  height: 69px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1250px) {
+  .blog-section {
+    height: 229px;
+    width: 552px;
+  }
+  .blog-section .img-section {
+    height: 146px;
+  }
+  .blog-section .img-section img {
+    width: 97px;
+    height: 146px;
+  }
+  .blog-section .large-image-section {
+    height: 229px;
+  }
+  .blog-section .large-image-section img {
+    height: 229px;
+    width: 300px;
+  }
+  .blog-section .text-section, .blog-section .text-section-large {
+    padding-right: 25px;
+  }
+  .blog-section .text-section h3, .blog-section .text-section-large h3 {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .blog-section .text-section p, .blog-section .text-section-large p {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+  .blog-section .text-section a, .blog-section .text-section-large a {
+    width: 89px;
+    height: 34px;
+    padding: 8px;
+    font-size: 12px;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
