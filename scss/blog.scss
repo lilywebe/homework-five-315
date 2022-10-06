@@ -1,0 +1,135 @@
+.blog-section{
+    width:80%;
+    height:460px;
+    margin: 0 auto;
+    margin-top:125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #587C83;
+
+    .large-image-section{
+           
+           width:30%;
+           height:460px;
+           
+           
+            
+        img{
+            height:460px;
+            width:626px;
+            align:left;
+        }
+    }
+
+    .img-section{
+        width:50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        
+        
+        img{
+            max-height:380px;
+            max-width:250px;
+
+            
+        }
+    }
+    .text-section{
+        color:white;
+        text-align:center;
+        width:35%;
+        padding-right:100px;
+
+        h3{
+            font-size:32px;
+            margin-bottom:60px;
+        }
+        p{
+            font-size:16px;
+            margin-bottom:60px;
+        }
+        a{
+            width:222px;
+            height:69px;
+            border-style:solid;
+            border-width: 1px;
+            border-color:white;
+            text-decoration: none;
+            color:white;
+            padding:20px;
+        }
+    }
+
+    .text-section-large{
+        color:white;
+        text-align:center;
+        width:35%;
+        padding-right:100px;
+
+        h3{
+            font-size:32px;
+            margin-bottom:60px;
+        }
+        p{
+            font-size:16px;
+            margin-bottom:60px;
+        }
+        a{
+            width:222px;
+            height:69px;
+            border-style:solid;
+            border-width: 1px;
+            border-color:white;
+            text-decoration: none;
+            color:white;
+            padding:20px;
+        }
+    }
+    
+}
+
+@media screen and (max-width:1250px) {
+    .blog-section{
+        height:229px;
+        width:552px;
+
+    
+    .img-section{
+        height:146px;
+        img{
+            width:97px;
+            height:146px;
+        }
+    }
+    .large-image-section{
+        height:229px;
+        img{
+            height:229px;
+            width:300px;
+        }
+    }
+
+    .text-section, .text-section-large{
+        padding-right:25px;
+        h3{
+            font-size: 12px;
+            margin-bottom:20px;
+        }
+        p{
+            font-size:11px;
+            margin-bottom:20px;
+
+        }
+        a{
+            width:89px;
+            height:34px;
+            padding:8px;
+            font-size:12px;
+
+        }
+    }
+}
+}
