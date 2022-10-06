@@ -491,5 +491,52 @@ nav .links .cartImg img {
     font-size: 12px;
   }
 }
+.hero-blog-feb {
+  width: 80%;
+  height: 460px;
+  background-image: linear-gradient(rgba(88, 124, 131, 0.6), rgba(88, 124, 131, 0.6)), url("../images/february-favorites-hero.png");
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  margin-top: 140px;
+  color: white;
+  text-align: center;
+}
+.hero-blog-feb h3 {
+  padding-top: 125px;
+  font-size: 32px;
+}
+.hero-blog-feb h4 {
+  font-size: 26px;
+  padding-top: 60px;
+}
+.hero-blog-feb p {
+  font-size: 16px;
+  padding-top: 60px;
+}
+
+.bhblogpost {
+  width: 80%;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 140px;
+}
+.bhblogpost img {
+  width: 250px;
+  height: 380px;
+}
+.bhblogpost .bh-text-section {
+  width: 70%;
+  padding-left: 20px;
+}
+.bhblogpost .bh-text-section h3 {
+  font-size: 26px;
+}
+.bhblogpost .bh-text-section p {
+  font-size: 16px;
+}
 
 /*# sourceMappingURL=styles.css.map */

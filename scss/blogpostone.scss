@@ -1,0 +1,53 @@
+.hero-blog-feb{
+    width:80%;
+    height:460px;
+    background-image: linear-gradient(rgba(88, 124, 131, 0.6), rgba(88, 124, 131, 0.6)),
+    url('../images/february-favorites-hero.png');
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top:140px;
+    color:white;
+    text-align:center;
+
+    h3{
+        padding-top:125px;
+        font-size: 32px;
+    }
+    h4{
+        font-size: 26px;
+        padding-top:60px;
+    }
+    p{
+        font-size: 16px;
+        padding-top:60px;
+    }
+}
+
+.bhblogpost{
+    width:80%;
+    height:380px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    margin-top:140px;
+
+    img{
+        width:250px;
+        height:380px;
+    }
+
+    .bh-text-section{
+        width:70%;
+        padding-left:20px;
+
+        h3{
+            font-size: 26px;
+        }
+
+        p{
+            font-size: 16px;
+        }
+    }
+}
