@@ -121,9 +121,7 @@ nav .links .cartImg img {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 75%;
-  left: 70%;
-  transform: translate(-50%, -50%);
+  left: 65%;
 }
 .home-wrapper .home-header-container .home-header-img .hero-txt {
   min-height: 43px;
@@ -192,6 +190,30 @@ nav .links .cartImg img {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1000px) {
+  .home-wrapper .home-header-container {
+    min-height: 530px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: red;
+  }
+  .home-wrapper .home-header-container .home-header-img {
+    min-height: 400px;
+    width: 80%;
+    margin-top: 58px;
+    background-color: #587c83;
+  }
+  .home-wrapper .home-header-container .home-header-img .hero-img {
+    height: 77px;
+    width: 116px;
+    background-image: url(../images/home-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
 .accounts-page {
   width: 50%;
   margin: 0 auto;
