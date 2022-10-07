@@ -123,19 +123,24 @@ export function changePage(pageID, callback) {
       cart.forEach((item) => {
         bookList.forEach((book) => {
           if (item.id == book.id) {
-            $(".cart-items").append(`<div class="cart-item-img">
+            $(".cart-items")
+              .append(`<div class="cart-item"><div class="cart-item-img">
             <img src="${book.imgURL}" alt="" />
           </div>
-          <div class="cart-item" id="">
+          <div class="cart-item-text" id="">
             <div class="item-title">${book.id}</div>
             <div class="item-price">$${book.price}</div>
             <div class="in-stock">In Stock</div>
+            
             <div class="quantity-change-delete">
-              <p id="quantity">Qty: ${item.quantity}</p>
-              <div class="changes"><a href="#change">change</a></div>
+              Qty: ${item.quantity}
+              <a href="#change">change</a>
       <a id="${item.id}"href="#delete">delete</a>
             </div>
-          </div>`);
+            </div>
+            </div>
+          
+          <hr/>`);
           }
         });
       });
