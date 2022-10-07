@@ -20,7 +20,27 @@ function initURLListener() {
   changeRoute();
 }
 
-function initQuantityListeners() {}
+function reloadCart() {
+  model.changePage("cart", initQuantityListeners);
+}
+
+function initQuantityListeners() {
+  $(".increase-quantity").on("click", function (e) {
+    let bookid = e.currentTarget.id;
+    console.log(bookid);
+    model.addToCart(bookid);
+  });
+  $(".decrease-quantity").on("click", function (e) {
+    let bookid = e.currentTarget.id;
+    console.log(bookid);
+    model.removeFromCart(bookid);
+  });
+  $(".zero-quantity").on("click", function (e) {
+    let bookid = e.currentTarget.id;
+    console.log(bookid);
+    model.deleteFromCart(bookid);
+  });
+}
 
 //add buy listeners
 function buyNow() {
