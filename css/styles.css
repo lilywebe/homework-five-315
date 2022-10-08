@@ -90,6 +90,50 @@ nav .links .cartImg img {
   width: 47px;
 }
 
+@media screen and (max-width: 1000px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  nav .logo img {
+    min-height: 53px;
+    width: 53px;
+  }
+  nav .search {
+    width: 304px;
+  }
+  nav .links {
+    width: 490px;
+  }
+  nav .links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-family: "Segoe UI";
+  }
+  nav .links .accountImg {
+    min-height: 47px;
+    width: 47px;
+  }
+  nav .links .accountImg img {
+    min-height: 37px;
+    width: 37px;
+  }
+  nav .links .cartImg {
+    min-height: 37px;
+    width: 37px;
+  }
+  nav .links .cartImg img {
+    min-height: 37px;
+    width: 37px;
+  }
+}
 .home-wrapper {
   min-height: 100%;
   width: 100%;

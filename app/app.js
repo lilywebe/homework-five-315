@@ -103,6 +103,10 @@ function initSubmitListeners() {
   });
 }
 
+
+
+
 $(document).ready(function () {
   initURLListener();
+  
 });

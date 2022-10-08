@@ -80,3 +80,59 @@ nav {
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+      img {
+        min-height: 53px;
+        width: 53px;
+      }
+    }
+
+    .search {
+      width: 304px;
+    }
+
+    .links {
+      width: 490px;
+
+      a {
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+        font-family: "Segoe UI";
+      }
+
+      .accountImg {
+        min-height: 47px;
+        width: 47px;
+
+        img {
+          min-height: 37px;
+          width: 37px;
+        }
+      }
+
+      .cartImg {
+        min-height: 37px;
+        width: 37px;
+
+        img {
+          min-height: 37px;
+          width: 37px;
+        }
+      }
+    }
+  }
+}
