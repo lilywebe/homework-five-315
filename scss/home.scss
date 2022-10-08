@@ -132,7 +132,8 @@
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      background-color: red;
+      position: relative;
+      // background-color: red;
 
       .home-header-img {
         min-height: 400px;
@@ -142,12 +143,19 @@
 
         // fix this...
         .hero-img {
-          height: 200px;
-          width: 200px;
+          min-height: 200px;
+          width: 250px;
+          position: static;
+          right: 60%;
           background-image: url(../images/home-hero.jpg);
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: cover;
+        }
+
+        .hero-header-text {
+          min-height: 200px;
+          width: 250px;
+          position: static;
+          right: 50%;
+          // background-color: yellow;
         }
       }
     }

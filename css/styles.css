@@ -197,7 +197,7 @@ nav .links .cartImg img {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: red;
+    position: relative;
   }
   .home-wrapper .home-header-container .home-header-img {
     min-height: 400px;
@@ -206,12 +206,17 @@ nav .links .cartImg img {
     background-color: #587c83;
   }
   .home-wrapper .home-header-container .home-header-img .hero-img {
-    height: 200px;
-    width: 200px;
+    min-height: 200px;
+    width: 250px;
+    position: static;
+    right: 60%;
     background-image: url(../images/home-hero.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  }
+  .home-wrapper .home-header-container .home-header-img .hero-header-text {
+    min-height: 200px;
+    width: 250px;
+    position: static;
+    right: 50%;
   }
   .home-wrapper .home-books-container .home-books-row {
     min-height: 700px;
@@ -322,6 +327,7 @@ nav .links .cartImg img {
   min-height: 400px;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 200px;
 }
 .books-wrapper .books-top-container .books-top-header-text {
   min-height: 50px;
@@ -730,6 +736,51 @@ nav .links .cartImg img {
 .cart-items .cart-item .cart-item-text .in-stock {
   font-size: 16px;
   padding-bottom: 43px;
+}
+
+footer {
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #587c83;
+}
+footer .left {
+  min-height: 50px;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .left .foot-txt {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Segoe UI";
+}
+footer .mid {
+  min-height: 50px;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .mid .foot-txt {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Segoe UI";
+  text-decoration: none;
+}
+footer .right {
+  min-height: 50px;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .right img {
+  min-height: 22px;
+  width: 22px;
 }
 
 /*# sourceMappingURL=styles.css.map */
