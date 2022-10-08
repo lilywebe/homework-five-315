@@ -50,12 +50,25 @@
         }
     }
 
-    .logout{
-        display:none;
-        width:60%;
-        margin: 0 auto;
+   
+}
+
+.logout-content{
+
+    width:60%;
+    padding-top:100px;
+    margin: 0 auto;
+    text-align:center;
+
+    #logout{
+        width:170px;
+        height:45px;
+        color:white;
+        background-color: #587C83;
+        font-size:16px;
     }
 }
+
 
 
 

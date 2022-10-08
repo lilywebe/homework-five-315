@@ -439,10 +439,19 @@ nav .links .cartImg img {
   border-bottom: 1px solid black;
   margin-bottom: 40px;
 }
-.accounts-page .logout {
-  display: none;
+
+.logout-content {
   width: 60%;
+  padding-top: 100px;
   margin: 0 auto;
+  text-align: center;
+}
+.logout-content #logout {
+  width: 170px;
+  height: 45px;
+  color: white;
+  background-color: #587C83;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 1000px) {

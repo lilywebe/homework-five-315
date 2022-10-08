@@ -25,20 +25,18 @@ function reloadCart() {
 }
 
 function initQuantityListeners() {
-  $(".increase-quantity").on("click", function (e) {
-    let bookid = e.currentTarget.id;
-    console.log(bookid);
-    model.addToCart(bookid);
+  $(".change-quantity").on("click", function (e) {
+    let bookid = e.currentTarget.getAttribute("data-id");
+
+    let quantity = prompt("How many would you like?");
+    model.changeCartQuantity(bookid, quantity, changeRoute);
   });
-  $(".decrease-quantity").on("click", function (e) {
-    let bookid = e.currentTarget.id;
-    console.log(bookid);
-    model.removeFromCart(bookid);
-  });
+
   $(".zero-quantity").on("click", function (e) {
-    let bookid = e.currentTarget.id;
-    console.log(bookid);
-    model.deleteFromCart(bookid);
+    let bookid = e.currentTarget.getAttribute("data-id");
+
+    model.deleteFromCart(bookid, changeRoute);
+    console.log("deleted");
   });
 }
 
@@ -72,6 +70,8 @@ function initSubmitListeners() {
         password: pw,
       };
       model.setUserInfo(userObj);
+      alert("You are logged in ");
+      model.changePage("home", buyNow);
     }
 
     //console.log(fn, ln, email, pw);
@@ -95,6 +95,11 @@ function initSubmitListeners() {
         alert("Your username or password is incorrect");
       }
     }
+  });
+  $("#logout").on("click", function (e) {
+    model.logUserOut();
+    alert("You are now logged out");
+    model.changePage("home", buyNow);
   });
 }
 

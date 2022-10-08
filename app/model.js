@@ -117,14 +117,15 @@ export function changePage(pageID, callback) {
       callback();
     });
   } else if (pageID == "cart") {
-    console.log(pageID);
-    $.get(`pages/${pageID}.html`, function (data) {
-      $("#app").html(data);
-      cart.forEach((item) => {
-        bookList.forEach((book) => {
-          if (item.id == book.id) {
-            $(".cart-items")
-              .append(`<div class="cart-item"><div class="cart-item-img">
+    if (userSignedIn) {
+      console.log(pageID);
+      $.get(`pages/${pageID}.html`, function (data) {
+        $("#app").html(data);
+        cart.forEach((item) => {
+          bookList.forEach((book) => {
+            if (item.id == book.id) {
+              $(".cart-items")
+                .append(`<div class="cart-item"><div class="cart-item-img">
             <img src="${book.imgURL}" alt="" />
           </div>
           <div class="cart-item-text" id="">
@@ -134,17 +135,21 @@ export function changePage(pageID, callback) {
             
             <div class="quantity-change-delete">
               Qty: ${item.quantity}
-              <a href="#change">change</a>
-      <a id="${item.id}"href="#delete">delete</a>
+              <button class="change-quantity" data-id="${item.id}">change</button>
+      <button class="zero-quantity" data-id="${item.id}">delete</button>
             </div>
             </div>
             </div>
           
           <hr/>`);
-          }
+            }
+          });
         });
+        callback();
       });
-    });
+    } else {
+      alert("You must sign in to view the cart!");
+    }
   } else if (
     pageID == "blogpostone" ||
     pageID == "blogposttwo" ||
@@ -159,6 +164,21 @@ export function changePage(pageID, callback) {
     } else {
       alert("You must sign in to view blog posts!");
     }
+  } else if (pageID == "account") {
+    if (!userSignedIn) {
+      $.get(`pages/${pageID}.html`, function (data) {
+        console.log("data " + data);
+        $("#app").html(data);
+        callback();
+      });
+    } else {
+      console.log("logout page");
+      $.get(`pages/logout.html`, function (data) {
+        console.log("data " + data);
+        $("#app").html(data);
+        callback();
+      });
+    }
   } else {
     $.get(`pages/${pageID}.html`, function (data) {
       console.log("data " + data);
@@ -171,6 +191,10 @@ export function setUserInfo(userObject) {
   userInfo = userObject;
   userSignedIn = true;
   console.log(userInfo);
+}
+
+export function logUserOut() {
+  userSignedIn = false;
 }
 
 export function checkUserLogin(useremail, userpass) {
@@ -200,30 +224,46 @@ export function removeFromCart(bookIdx) {
   });
 }
 
-export function deleteFromCart(bookIdx) {
+export function deleteFromCart(bookIdx, callback) {
+  let index = 0;
   cart.forEach((item) => {
     if (item.id == bookIdx) {
-      item.quantity = 0;
+      cart.splice(index, 1);
     }
+    index++;
   });
+  callback();
 }
 
 export function addToCart(bookIdx) {
   console.log(cart);
+  if (userSignedIn) {
+    let happened = false;
 
-  let happened = false;
-
-  cart.forEach((item) => {
-    if (item.id == bookIdx) {
-      item.quantity += 1;
-      happened = true;
-    }
-  });
-
-  if (!happened) {
-    cart.push({
-      id: bookIdx,
-      quantity: 1,
+    cart.forEach((item) => {
+      if (item.id == bookIdx) {
+        item.quantity += 1;
+        happened = true;
+      }
     });
+
+    if (!happened) {
+      cart.push({
+        id: bookIdx,
+        quantity: 1,
+      });
+    }
+  } else {
+    alert("You must sign in to add to your cart!");
   }
+}
+
+export function changeCartQuantity(bookid, quantity, callback) {
+  if (quantity !== null && quantity !== "" && !isNaN(quantity))
+    cart.forEach((item) => {
+      if (item.id == bookid) {
+        item.quantity = quantity;
+      }
+    });
+  callback();
 }
