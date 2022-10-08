@@ -3,18 +3,21 @@ var userInfo = {};
 var bookList = [
   {
     id: 0,
+    title: "To Kill A Mockingbird",
     imgURL: "images/to-kill-a-mockingbird.jpg",
     price: "15.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 1,
+    title: "Becoming",
     imgURL: "images/becoming.jpg",
     price: "25.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 2,
+    title: "Firestarter",
     imgURL: "images/firestarter.jpg",
     price: "15.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
@@ -22,72 +25,84 @@ var bookList = [
 
   {
     id: 3,
+    title: "Twilight Box Set",
     imgURL: "images/twilight-box-set.jpg",
     price: "99.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 4,
+    title: "Harry Potter Box Set",
     imgURL: "images/hp-box-set.jpg",
     price: "100.00",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 5,
+    title: "Game of Thrones Box Set",
     imgURL: "images/got-box-set.jpg",
     price: "99.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 6,
+    title: "Finding Me",
     imgURL: "images/finding me.jpg",
     price: "27.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 7,
+    title: "Martin Luther King Jr Biography",
     imgURL: "images/mlk-biography.jpg",
     price: "19.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 8,
+    title: "Eleanor Roosevelt Biography",
     imgURL: "images/eleanor-roosevelt-biography.jpg",
     price: "17.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 9,
+    title: "Misery",
     imgURL: "images/misery.jpg",
     price: "19.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 10,
+    title: "Frankenstein",
     imgURL: "images/frankenstein.jpg",
     price: "15.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 11,
+    title: "Phantoms",
     imgURL: "images/phantoms.jpg",
     price: "19.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 12,
+    title: "Winnie The Pooh",
     imgURL: "images/winnie the pooh.jpg",
     price: "19.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 13,
+    title: "Cat and The Hat",
     imgURL: "images/cat and the hat.jpg",
     price: "15.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
   },
   {
     id: 14,
+    title: "Fun Facts About Space",
     imgURL: "images/fun facts about space.jpg",
     price: "7.99",
     desc: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' Urna nunc id cursus metus aliquam eleifend mi. Massa vitae tortor condimentum lacinia quis vel eros.",
@@ -129,7 +144,7 @@ export function changePage(pageID, callback) {
             <img src="${book.imgURL}" alt="" />
           </div>
           <div class="cart-item-text" id="">
-            <div class="item-title">${book.id}</div>
+            <div class="item-title">${book.title}</div>
             <div class="item-price">$${book.price}</div>
             <div class="in-stock">In Stock</div>
             
