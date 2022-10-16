@@ -492,6 +492,7 @@ nav .links .cartImg img {
 
 .logout-content {
   width: 60%;
+  height: 600px;
   padding-top: 100px;
   margin: 0 auto;
   text-align: center;
@@ -780,6 +781,11 @@ nav .links .cartImg img {
 .cart-items .cart-item .cart-item-text .in-stock {
   font-size: 16px;
   padding-bottom: 43px;
+}
+
+.quantity-change-delete button {
+  background-color: white;
+  border-style: none;
 }
 
 footer {
